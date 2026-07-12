@@ -21,7 +21,7 @@
   <main class="grid" id="portfolio"></main>
   <footer class="footer"><a class="brand" href="#top"><strong>Franciszek Lubicz-Łapiński</strong><span>Director of photography</span></a><p class="copy">© Wszystkie prawa zastrzeżone</p></footer>
   <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Odtwarzacz filmu"><p class="viewer-title" id="viewerTitle"></p><button class="viewer-close" onclick="closeVideo()" aria-label="Zamknij film">×</button><div class="viewer-frame" id="viewerFrame"></div></div>
-  <script src="films.js"></script>
+  <script src="films.js?v=2"></script>
   <script>
     portfolio.innerHTML=films.map((f,i)=>`<button class="film" id="${f.section||''}" onclick="openVideo(${i})"><img src="${f.image}" alt="Kadr z filmu ${f.title}" loading="lazy"><span class="play"></span><div class="info"><h2>${f.title}</h2><p>${f.type||'Film'}${f.year?' · '+f.year:''}</p></div></button>`).join('');
     function openVideo(i){const f=films[i];viewerTitle.textContent=f.title;viewerFrame.innerHTML=`<iframe src="${f.embed}${f.embed.includes('?')?'&':'?'}autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${f.title}"></iframe>`;viewer.classList.add('open');document.body.classList.add('player-open')}
