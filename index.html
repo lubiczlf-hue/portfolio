@@ -29,7 +29,7 @@
   <script src="films.js?v=2"></script>
   <script>
     portfolio.innerHTML=films.map((f,i)=>`<button class="film" id="${f.section||''}" onclick="openVideo(${i})" aria-label="Odtwórz film"><img src="${f.image}" alt="" width="1280" height="720" loading="${i<4?'eager':'lazy'}" fetchpriority="${i<4?'high':'low'}" decoding="async"><span class="play"></span></button>`).join('');
-    function openVideo(i){const f=films[i];viewerFrame.classList.add('loading');viewer.classList.add('open');document.body.classList.add('player-open');const embed=f.embed.replace(/([?&])api=1(&|$)/,'$1').replace(/[?&]$/,'');viewerFrame.innerHTML=`<iframe src="${embed}${embed.includes('?')?'&':'?'}autoplay=1&playsinline=1" loading="eager" onload="viewerFrame.classList.remove('loading')" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Odtwarzacz filmu"></iframe>`}
+    function openVideo(i){const f=films[i];viewerFrame.classList.add('loading');viewer.classList.add('open');document.body.classList.add('player-open');const embed=f.embed.replace(/([?&])api=1(&|$)/,'$1').replace(/[?&]$/,'');viewerFrame.innerHTML=`<iframe src="${embed}${embed.includes('?')?'&':'?'}autoplay=1&muted=0&playsinline=1" loading="eager" onload="viewerFrame.classList.remove('loading')" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Odtwarzacz filmu"></iframe>`}
     function closeVideo(){viewer.classList.remove('open');viewerFrame.classList.remove('loading');viewerFrame.innerHTML='';document.body.classList.remove('player-open')}
     function toggleMenu(){mobile.classList.toggle('open')}
     addEventListener('keydown',e=>e.key==='Escape'&&(mobile.classList.remove('open'),closeVideo()));
