@@ -3,6 +3,12 @@
 
 const films = [
   {
+    "title": "Preise, die man nicht verstecken muss.",
+    "type": "YouTube",
+    "embed": "https://www.youtube.com/embed/i_dIB948hoU?rel=0&wmode=opaque&hd=1&enablejsapi=1",
+    "image": "https://img.youtube.com/vi/i_dIB948hoU/maxresdefault.jpg"
+  },
+  {
     "title": "Echte Deals für deine Geschenke. Jetzt auf idealo.",
     "type": "YouTube",
     "embed": "https://www.youtube.com/embed/gDVGRUNbrY8?rel=0&wmode=opaque&hd=1&enablejsapi=1",
