@@ -3,6 +3,12 @@
 
 const films = [
   {
+    "title": "Echte Deals für deine Geschenke. Jetzt auf idealo.",
+    "type": "YouTube",
+    "embed": "https://www.youtube.com/embed/gDVGRUNbrY8?rel=0&wmode=opaque&hd=1&enablejsapi=1",
+    "image": "https://img.youtube.com/vi/gDVGRUNbrY8/maxresdefault.jpg"
+  },
+  {
     "title": "Film 01",
     "type": "YouTube",
     "embed": "https://www.youtube.com/embed/cOiN32ALkTI?rel=0&wmode=opaque&hd=1&enablejsapi=1",
